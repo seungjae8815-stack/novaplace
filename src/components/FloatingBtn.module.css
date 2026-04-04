@@ -1,0 +1,50 @@
+.floatingContainer {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 999;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  background: var(--primary-color);
+  border-radius: 999px;
+  padding: 8px 24px 8px 8px;
+  box-shadow: 0 10px 25px rgba(0, 210, 130, 0.4);
+  transition: transform 0.3s ease;
+  color: #000;
+  text-decoration: none;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+}
+
+.iconBox {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+
+.text {
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .floatingContainer {
+    bottom: 24px;
+    right: 24px;
+    left: 24px;
+  }
+  .btn {
+    justify-content: center;
+    padding: 12px;
+  }
+}

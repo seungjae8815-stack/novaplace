@@ -1,0 +1,143 @@
+.section {
+  background: var(--background);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 24px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+
+.highlight {
+  color: var(--primary-color);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.brDesktop {
+  display: block;
+}
+
+.processCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.pCard {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.pCard:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(0, 210, 130, 0.3);
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 24px;
+}
+
+.pCard h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.pCard p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.processSection {
+  background: #090e1a;
+}
+
+.stepTimeline {
+  display: flex;
+  margin-top: 60px;
+  padding: 0 40px;
+}
+
+.stepItem {
+  flex: 1;
+  position: relative;
+  text-align: left;
+  padding-right: 20px;
+}
+
+.stepNum {
+  display: inline-block;
+  background: var(--primary-color);
+  color: #000;
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 6px 12px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+
+.stepItem h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.stepItem p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.connector {
+  position: absolute;
+  top: 15px;
+  left: 90px;
+  width: calc(100% - 90px - 20px);
+  height: 2px;
+  background: rgba(0, 210, 130, 0.2);
+}
+
+.connector::after {
+  content: '';
+  position: absolute;
+  right: -5px;
+  top: -4px;
+  width: 10px;
+  height: 10px;
+  background: var(--primary-color);
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .processCards { grid-template-columns: 1fr; }
+  .stepTimeline { flex-direction: column; gap: 40px; padding: 0; }
+  .connector { display: none; }
+  .stepItem { text-align: center; padding-right: 0; }
+  .brDesktop { display: none; }
+  .container { padding: 80px 24px; }
+  .title { font-size: 1.8rem; }
+}
