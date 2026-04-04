@@ -21,7 +21,7 @@ export default function CTA() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
         >
-          <h2>이제 최적화는 선택이 아닌 <br className={styles.mobileBr}/> <span>필수</span>입니다.</h2>
+          <h2>이제 최적화는 <br className={styles.mobileBr}/> 선택이 아닌 <br className={styles.mobileBr}/> <span>필수</span>입니다.</h2>
           <p>수많은 상위 노출 사례가 증명하는 노바플레이스와 함께 매출 상승을 경험하세요.</p>
           
           <form className={styles.formContainer} onSubmit={handleSubmit}>

@@ -15,7 +15,7 @@ export default function PainPoint() {
           transition={{ duration: 0.8 }}
         >
           <h2 className={styles.title}>
-            매일 내 플레이스보다 앞서던 옆집...<br className={styles.desktopBr}/>
+            매일 내 플레이스보다 앞서던 옆집...<br/>
             <span className={styles.highlight}>&quot;대체 뭘 한거지?&quot;</span>
           </h2>
           <p className={styles.subtitle}>
