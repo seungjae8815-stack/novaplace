@@ -23,6 +23,8 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: 'Pretendard', Arial, Helvetica, sans-serif;
+  word-break: keep-all; /* Ensures natural Korean word wrapping */
+  overflow-wrap: break-word;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

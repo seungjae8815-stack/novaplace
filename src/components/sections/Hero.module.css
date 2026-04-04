@@ -144,8 +144,13 @@
   100% { transform: scaleY(0); transform-origin: bottom; }
 }
 
+.desktopBr {
+  display: block;
+}
+
 @media (max-width: 768px) {
   .title { font-size: 2.5rem; }
   .subtitle { font-size: 1rem; }
   .buttonGroup { flex-direction: column; width: 100%; max-width: 300px; }
+  .desktopBr { display: none; }
 }

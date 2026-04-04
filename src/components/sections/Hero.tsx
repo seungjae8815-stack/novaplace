@@ -15,11 +15,11 @@ export default function Hero() {
         >
           <div className={styles.badge}>✨ 2026 프리미엄 플레이스 최적화</div>
           <h1 className={styles.title}>
-            사장님들은<br/>
+            사장님들은<br className={styles.desktopBr}/>
             <span className={styles.highlight}>장사에만 집중하세요!</span>
           </h1>
           <p className={styles.subtitle}>
-            어려운 네이버 플레이스 로직, 노바플레이스가 전부 알아서 순위를 올려드립니다.<br/>
+            어려운 네이버 플레이스 로직, 노바플레이스가 모두 알아서 순위를 올려드립니다.<br className={styles.desktopBr}/>
             확실한 매출 상승을 경험해보세요.
           </p>
           <div className={styles.buttonGroup}>
