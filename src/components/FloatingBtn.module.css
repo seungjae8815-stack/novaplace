@@ -8,9 +8,11 @@
 .btn {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 8px;
   background: #fee500;
   border-radius: 999px;
-  padding: 8px 24px 8px 8px;
+  padding: 16px 32px;
   box-shadow: 0 10px 25px rgba(254, 229, 0, 0.4);
   transition: transform 0.3s ease;
   color: #000;
@@ -22,14 +24,9 @@
 }
 
 .iconBox {
-  width: 40px;
-  height: 40px;
-  background: #fff;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 12px;
 }
 
 .text {
@@ -44,7 +41,6 @@
     left: 24px;
   }
   .btn {
-    justify-content: center;
-    padding: 12px;
+    padding: 16px 32px;
   }
 }
