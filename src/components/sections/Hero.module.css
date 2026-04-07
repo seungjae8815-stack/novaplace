@@ -69,6 +69,12 @@
   -webkit-text-fill-color: transparent;
 }
 
+.brandHighlight {
+  color: var(--primary-color);
+  font-weight: 800;
+  font-size: 1.25em;
+}
+
 .subtitle {
   font-size: 1.25rem;
   color: var(--text-muted);

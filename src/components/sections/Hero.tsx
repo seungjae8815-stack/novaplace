@@ -19,7 +19,7 @@ export default function Hero() {
             <span className={styles.highlight}>장사에만 집중하세요!</span>
           </h1>
           <p className={styles.subtitle}>
-            어려운 네이버 플레이스 로직, 노바플레이스가<br/>
+            어려운 네이버 플레이스 로직, <span className={styles.brandHighlight}>노바플레이스</span>가<br/>
             모두 알아서 순위를 올려드립니다.<br/>
             확실한 매출 상승을 경험해 보세요.
           </p>
