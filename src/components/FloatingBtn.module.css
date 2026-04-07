@@ -9,10 +9,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 10px;
   background: #fee500;
   border-radius: 999px;
-  padding: 16px 32px;
+  padding: 8px 28px 8px 8px; /* 42px icon + 16px padding = 58px height */
   box-shadow: 0 10px 25px rgba(254, 229, 0, 0.4);
   transition: transform 0.3s ease;
   color: #000;
@@ -24,6 +24,10 @@
 }
 
 .iconBox {
+  width: 42px;
+  height: 42px;
+  background: #fff;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,6 +45,6 @@
     left: 24px;
   }
   .btn {
-    padding: 16px 32px;
+    padding: 8px 28px 8px 8px;
   }
 }
