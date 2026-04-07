@@ -23,8 +23,8 @@ export default function PainPoint() {
       img: "/images/nail.png",
       alt: "네일샵",
       rating: "4.95",
-      visitors: "4,210",
-      blogs: "3,105",
+      visitors: "1,129",
+      blogs: "478",
       desc: "아름다운 손끝을 완성하는 공간"
     },
     {
@@ -32,8 +32,8 @@ export default function PainPoint() {
       img: "/images/pilates_korean.png",
       alt: "필라테스",
       rating: "4.92",
-      visitors: "2,890",
-      blogs: "1,540",
+      visitors: "1,495",
+      blogs: "782",
       desc: "건강한 몸과 마음을 위한 프라이빗 레슨"
     }
   ];
