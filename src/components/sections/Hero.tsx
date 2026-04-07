@@ -13,7 +13,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <div className={styles.badge}>✨ 최신로직 적용 <span className={styles.desktopOnly}>프리미엄</span></div>
+          <div className={styles.badge}>✨ 최신로직 적용 <span className={styles.desktopOnly}>프리미엄 </span>플레이스 최적화</div>
           <h1 className={styles.title}>
             사장님들은<br className={styles.desktopBr}/>
             <span className={styles.highlight}>장사에만 집중하세요!</span>
