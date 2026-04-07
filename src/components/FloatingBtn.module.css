@@ -8,10 +8,10 @@
 .btn {
   display: flex;
   align-items: center;
-  background: var(--primary-color);
+  background: #fee500;
   border-radius: 999px;
   padding: 8px 24px 8px 8px;
-  box-shadow: 0 10px 25px rgba(0, 210, 130, 0.4);
+  box-shadow: 0 10px 25px rgba(254, 229, 0, 0.4);
   transition: transform 0.3s ease;
   color: #000;
   text-decoration: none;

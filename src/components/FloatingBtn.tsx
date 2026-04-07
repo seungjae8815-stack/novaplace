@@ -11,11 +11,11 @@ export default function FloatingBtn() {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ delay: 1 }}
     >
-      <a href="#cta" className={styles.btn}>
+      <a href="http://pf.kakao.com/_eNxguX/chat" target="_blank" rel="noopener noreferrer" className={styles.btn}>
         <div className={styles.iconBox}>
-          <MessageCircle size={24} color="#000" />
+          <MessageCircle size={24} color="#3A1D1D" strokeWidth={2.5} />
         </div>
-        <span className={styles.text}>무료 진단 받기</span>
+        <span className={styles.text}>카카오톡 상담하기</span>
       </a>
     </motion.div>
   );
