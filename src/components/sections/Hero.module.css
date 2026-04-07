@@ -44,11 +44,11 @@
 
 .badge {
   display: inline-block;
-  padding: 8px 16px;
+  padding: 16px 32px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--glass-border);
   border-radius: 999px;
-  font-size: 0.9rem;
+  font-size: 1.8rem;
   font-weight: 600;
   color: var(--primary-color);
   margin-bottom: 24px;

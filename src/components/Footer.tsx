@@ -11,9 +11,11 @@ export default function Footer() {
           </div>
           <div className={styles.contact}>
             <h3>무료 컨설팅 문의</h3>
-            <p>1588-0000</p>
-            <p>help@novaplace.kr</p>
-            <p>평일 10:00 - 18:00 (주말/공휴일 휴무)</p>
+            <p>010-4888-0436</p>
+            <p>nova_place@naver.com</p>
+            <p>평일 10:00 ~ 19:00 (주말/공휴일 휴무)</p>
+            <p>사업자등록번호: 585-74-00555</p>
+            <p>통신판매신고번호: 제2026-서울강동-0596호</p>
           </div>
         </div>
         <div className={styles.bottom}>

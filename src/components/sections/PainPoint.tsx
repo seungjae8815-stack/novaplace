@@ -1,9 +1,50 @@
 "use client";
+import { useState, useEffect } from "react";
 import styles from "./PainPoint.module.css";
-import { motion } from "framer-motion";
-import { Search, Star, MessageSquare } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Search, Star, MessageSquare, Home } from "lucide-react";
+import Image from "next/image";
 
 export default function PainPoint() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides = [
+    {
+      title: "블랙스톤 그릴하우스 압구정점",
+      img: "/images/steak.png",
+      alt: "스테이크",
+      rating: "4.89",
+      visitors: "3,173",
+      blogs: "2,882",
+      desc: "맛있는 스테이크와 즐거움이 있는 곳"
+    },
+    {
+      title: "루미에르 네일스튜디오 강남",
+      img: "/images/nail.png",
+      alt: "네일샵",
+      rating: "4.95",
+      visitors: "4,210",
+      blogs: "3,105",
+      desc: "아름다운 손끝을 완성하는 공간"
+    },
+    {
+      title: "바디앤소울 기구필라테스 본점",
+      img: "/images/pilates_korean.png",
+      alt: "필라테스",
+      rating: "4.92",
+      visitors: "2,890",
+      blogs: "1,540",
+      desc: "건강한 몸과 마음을 위한 프라이빗 레슨"
+    }
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section id="painpoint" className={styles.section}>
       <div className={styles.container}>
@@ -33,6 +74,9 @@ export default function PainPoint() {
           >
             <div className={styles.cardHeader}>관리가 안 된 우리 가게</div>
             <div className={styles.searchMockup}>
+              <div className={styles.emptyImagePlaceholder}>
+                  <Home className={styles.emptyHomeIcon} size={24} />
+              </div>
               <div className={styles.mockupTitle}>우리동네 맛집</div>
               <div className={styles.mockupStats}>
                 <span className={styles.grayText}>방문자 리뷰 1</span>
@@ -50,19 +94,38 @@ export default function PainPoint() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
              <div className={styles.cardHeader}>승승장구하는 옆집</div>
-             <div className={styles.searchMockupHighlight}>
-              <div className={styles.mockupTitleHighlight}>스테이크, 립</div>
-              <div className={styles.mockupStatsHighlight}>
-                <span className={styles.star}><Star size={14} fill="currentColor" /> 4.58</span>
-                <span>방문자 리뷰 3,173</span>
-                <span>블로그 리뷰 2,882</span>
-              </div>
-              <div className={styles.mockupDesc}>맛있는 스테이크와 즐거움이 있는 곳</div>
-              <div className={styles.actionButtons}>
-                 <button><Search size={14}/> 길찾기</button>
-                 <button className={styles.reserveBtn}><MessageSquare size={14}/> 예약</button>
-              </div>
-            </div>
+             <div className={styles.sliderContainer}>
+               <AnimatePresence mode="wait">
+                 <motion.div
+                   key={currentSlide}
+                   initial={{ opacity: 0, x: 20 }}
+                   animate={{ opacity: 1, x: 0 }}
+                   exit={{ opacity: 0, x: -20 }}
+                   transition={{ duration: 0.3 }}
+                   className={styles.searchMockupHighlight}
+                 >
+                  <div className={styles.successImageContainer}>
+                    <Image src={slides[currentSlide].img} alt={slides[currentSlide].alt} fill className={styles.slideImg} />
+                  </div>
+                  <div className={styles.mockupTitleHighlight}>{slides[currentSlide].title}</div>
+                  <div className={styles.mockupStatsHighlight}>
+                    <span className={styles.star}><Star size={14} fill="currentColor" /> {slides[currentSlide].rating}</span>
+                    <span>방문자 리뷰 {slides[currentSlide].visitors}</span>
+                    <span>블로그 리뷰 {slides[currentSlide].blogs}</span>
+                  </div>
+                  <div className={styles.mockupDesc}>{slides[currentSlide].desc}</div>
+                  <div className={styles.actionButtons}>
+                     <button><Search size={14}/> 길찾기</button>
+                     <button className={styles.reserveBtn}><MessageSquare size={14}/> 예약</button>
+                  </div>
+                 </motion.div>
+               </AnimatePresence>
+               <div className={styles.indicators}>
+                 {slides.map((_, idx) => (
+                   <span key={idx} className={idx === currentSlide ? styles.activeDot : styles.dot} />
+                 ))}
+               </div>
+             </div>
           </motion.div>
         </div>
 

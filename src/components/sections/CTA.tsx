@@ -6,10 +6,38 @@ import { useState } from "react";
 export default function CTA() {
   const [formData, setFormData] = useState({ name: "", phone: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert(`제출 완료! 상호명: ${formData.name}, 연락처: ${formData.phone}\n빠른 시일 내에 연락드리겠습니다.`);
-    setFormData({ name: "", phone: "" });
+    try {
+      const response = await fetch('https://sheetdb.io/api/v1/1ukr6zqfhyrc2', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          data: [
+            {
+              "상호명": formData.name,
+              "이름": formData.name,
+              "연락처": formData.phone,
+              "전화번호": formData.phone,
+              "신청일시": new Date().toLocaleString('ko-KR')
+            }
+          ]
+        })
+      });
+      
+      if (response.ok) {
+        alert("신청이 완료되었습니다! 확인 후 빠르게 연락드리겠습니다.");
+        setFormData({ name: "", phone: "" });
+      } else {
+        alert("신청 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("신청 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.");
+    }
   };
 
   return (
@@ -48,8 +76,8 @@ export default function CTA() {
           </form>
 
           <div className={styles.phoneBox}>
-            <span className={styles.label}>빠른 문의 (평일 10:00 - 18:00)</span>
-            <strong className={styles.number}>1588-0000</strong>
+            <span className={styles.label}>빠른 문의 (평일 10:00 - 19:00)</span>
+            <strong className={styles.number}>010-4888-0436</strong>
           </div>
 
         </motion.div>
