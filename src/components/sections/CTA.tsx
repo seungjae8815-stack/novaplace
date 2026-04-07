@@ -9,7 +9,7 @@ export default function CTA() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://sheetdb.io/api/v1/fimdgrukdqxr9', {
+      const response = await fetch('https://sheetdb.io/api/v1/je9f5jh8pqc1z', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
