@@ -15,7 +15,7 @@ export default function FloatingBtn() {
         <div className={styles.iconBox}>
           <MessageCircle size={24} color="#3A1D1D" strokeWidth={2.5} />
         </div>
-        <span className={styles.text}>카카오톡 상담하기</span>
+        <span className={styles.text}>1:1 무료진단받기</span>
       </a>
     </motion.div>
   );
