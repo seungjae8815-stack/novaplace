@@ -47,6 +47,7 @@ export default function Solution() {
         <div className={styles.container}>
            <motion.h2 
              className={styles.title}
+             style={{ textAlign: 'center' }}
              initial={{ opacity: 0, y: 30 }}
              whileInView={{ opacity: 1, y: 0 }}
              viewport={{ once: true }}
