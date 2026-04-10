@@ -6,6 +6,28 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "노바플레이스 | 네이버 플레이스 오르다",
   description: "사징님들은 장사에만 집중하세요! 노바플레이스가 네이버 플레이스 최적화와 순위 상승을 책임집니다.",
+  openGraph: {
+    title: "노바플레이스 | 네이버 플레이스 오르다",
+    description: "사징님들은 장사에만 집중하세요! 노바플레이스가 네이버 플레이스 최적화와 순위 상승을 책임집니다.",
+    url: "https://novaplace.vercel.app",
+    siteName: "노바플레이스",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "노바플레이스 로고",
+      },
+    ],
+    locale: "ko_KR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "노바플레이스 | 네이버 플레이스 오르다",
+    description: "사징님들은 장사에만 집중하세요! 노바플레이스가 네이버 플레이스 최적화와 순위 상승을 책임집니다.",
+    images: ["/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({
